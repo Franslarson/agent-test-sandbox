@@ -1,5 +1,7 @@
 import { Counter } from './components/Counter';
+
 import { DoubleCounter } from './components/DoubleCounter';
+import './App.css';
 
 function App() {
   return (
