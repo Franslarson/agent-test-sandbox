@@ -3,14 +3,15 @@ import { useCounter } from '../hooks/useCounter';
 interface CounterProps {
   min?: number;
   max?: number;
+  color?: string;
 }
 
-export function Counter({ min, max }: CounterProps) {
+export function Counter({ min, max, color }: CounterProps) {
   const { count, increment, decrement, reset } = useCounter(0);
 
   return (
     <div className="counter">
-      <p>Count: {count}</p>
+      <p style={{ color: color || undefined }}>Count: {count}</p>
       <button onClick={increment} disabled={max !== undefined && count >= max}>
         Increment
       </button>
