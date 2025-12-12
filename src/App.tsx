@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { Counter } from './components/Counter';
 import { ColorPicker } from './components/ColorPicker';
-import { DoubleCounter } from './components/DoubleCounter';
 import { History } from './components/History';
 import './App.css';
 
@@ -40,8 +39,6 @@ function App() {
       <h1>Agent Test Sandbox</h1>
       <ColorPicker selectedColor={selectedColor} onColorChange={setSelectedColor} />
       <Counter min={0} max={10} color={selectedColor} />
-      <Counter color={selectedColor} />
-      <DoubleCounter />
       <History history={history} />
     </div>
   );
