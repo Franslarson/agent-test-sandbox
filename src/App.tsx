@@ -1,5 +1,6 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { Counter } from './components/Counter';
+import { ColorPicker } from './components/ColorPicker';
 import { DoubleCounter } from './components/DoubleCounter';
 import { History } from './components/History';
 import './App.css';
@@ -32,16 +33,14 @@ function App() {
     setCount(0);
     updateHistory(0);
   }, [updateHistory]);
+  const [selectedColor, setSelectedColor] = useState('');
 
   return (
     <div className="app">
       <h1>Agent Test Sandbox</h1>
-      <Counter
-        count={count}
-        onIncrement={increment}
-        onDecrement={decrement}
-        onReset={reset}
-      />
+      <ColorPicker selectedColor={selectedColor} onColorChange={setSelectedColor} />
+      <Counter min={0} max={10} color={selectedColor} />
+      <Counter color={selectedColor} />
       <DoubleCounter />
       <History history={history} />
     </div>
