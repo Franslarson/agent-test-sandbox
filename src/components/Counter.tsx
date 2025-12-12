@@ -1,13 +1,18 @@
 import { useState } from 'react';
 
-export function Counter() {
-  const [count, setCount] = useState(0);
+interface CounterProps {
+  initialValue?: number;
+  step?: number;
+}
+
+export function Counter({ initialValue = 0, step = 1 }: CounterProps) {
+  const [count, setCount] = useState(initialValue);
 
   return (
     <div className="counter">
       <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button onClick={() => setCount(count + step)}>Increment</button>
+      <button onClick={() => setCount(count - step)}>Decrement</button>
     </div>
   );
 }
