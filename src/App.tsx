@@ -1,4 +1,6 @@
 import { Counter } from './components/Counter';
+
+import { DoubleCounter } from './components/DoubleCounter';
 import './App.css';
 
 function App() {
@@ -6,6 +8,7 @@ function App() {
     <div className="app">
       <h1>Agent Test Sandbox</h1>
       <Counter />
+      <DoubleCounter />
     </div>
   );
 }
