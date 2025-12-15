@@ -195,3 +195,104 @@ kbd {
 .color-buttons button:active {
   transform: scale(0.95);
 }
+
+/* Theme toggle button styling */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Light theme (default) */
+.light {
+  /* Light theme uses the existing styles */
+}
+
+/* Dark theme */
+.dark {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.dark h1 {
+  color: #e0e0e0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.dark .counter,
+.dark .color-picker,
+.dark .history {
+  background: #2d2d44;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dark .counter p,
+.dark .color-picker p,
+.dark .history h3 {
+  color: #e0e0e0;
+}
+
+.dark .history li {
+  background: #3d3d5c;
+  color: #d0d0d0;
+}
+
+.dark .history p {
+  color: #888;
+}
+
+.dark .keyboard-hints {
+  color: #aaa;
+  border-top-color: #444;
+}
+
+.dark kbd {
+  background-color: #3d3d5c;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+.dark button {
+  background-color: #7c3aed;
+}
+
+.dark button:hover {
+  background-color: #6d28d9;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+}
+
+.dark button:active {
+  background-color: #5b21b6;
+}
+
+.dark button:disabled {
+  background-color: #4a4a5a;
+}
+
+.dark .theme-toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+}
+
+.dark .theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
